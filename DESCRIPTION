@@ -5,7 +5,6 @@ Version: 1.0
 Date: 2017-03-26
 Authors: Redacted for review
 Description: This package provides fast estimators for common models in social science research.
-BugReports: https://github.com/DeclareDesign/estimatr/issues
 License: MIT + file LICENSE
 Imports: Rcpp (>= 0.12.10)
 LinkingTo: Rcpp, RcppArmadillo
