@@ -231,28 +231,28 @@ lm_lin <- function(formula,
   design_mat_treatment <- colnames(design_matrix)[treat_col]
 
   # Check case where treatment is not factor and is not binary
-  if (any(!(treatment %in% c(0, 1)))) {
+  #if (any(!(treatment %in% c(0, 1)))) {
     # create dummies for non-factor treatment variable
 
     # Drop out first group if there is an intercept
-    vals <- sort(unique(treatment))
-    if (has_intercept) vals <- vals[-1]
+  #  vals <- sort(unique(treatment))
+  #  if (has_intercept) vals <- vals[-1]
 
-    n_treats <- length(vals)
+  #  n_treats <- length(vals)
     # Could warn if there are too many values
     # (i.e., if there are as many treatments as observations)
 
-    names(vals) <- paste0(colnames(design_matrix)[treat_col], vals)
+  #  names(vals) <- paste0(colnames(design_matrix)[treat_col], vals)
 
 
     # Create matrix of dummies
-    treatment <-
-      outer(
-        drop(treatment),
-        vals,
-        function(x, y) as.numeric(x == y)
-      )
-  }
+  #  treatment <-
+  #    outer(
+  #      drop(treatment),
+  #      vals,
+  #      function(x, y) as.numeric(x == y)
+  #    )
+  #}
 
 
   # ----------
